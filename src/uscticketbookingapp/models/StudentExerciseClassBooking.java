@@ -56,7 +56,7 @@ public class StudentExerciseClassBooking {
     public void setStudent(Student student) {
         this.student = student;
     }
-
+//
     /**
      * @return the exclassTimetable
      */
@@ -77,7 +77,7 @@ public class StudentExerciseClassBooking {
     public Date getDate() {
         return date;
     }
-
+//
     /**
      * @param date the date to set
      */
