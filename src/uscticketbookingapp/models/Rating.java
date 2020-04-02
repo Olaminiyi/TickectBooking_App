@@ -27,6 +27,7 @@ public class Rating {
         setReview(review);
         
     }
+    //
     /**
      * @return the stdExClassBooking
      */

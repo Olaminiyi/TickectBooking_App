@@ -26,7 +26,7 @@ public class ExerciseClass {
      setShift(shift);
      setPrice(price);
     }
-    
+    //
    public void addExerciseClass(){
        
    }
