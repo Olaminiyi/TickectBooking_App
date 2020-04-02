@@ -5,6 +5,8 @@
  */
 package uscticketbookingapp;
 
+import java.util.Scanner;
+
 /**
  *
  * @author niyi
@@ -16,6 +18,11 @@ public class UscTicketBookingApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        BookingController book = new BookingController();
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Please enter your name");
+        System.out.println("Please enter your name");
+       // book.bookAClass(s,"");
     }
     
 }

@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uscticketbookingapp;
+package uscticketbookingapp.enums;
 
 /**
  *
  * @author niyi
  */
-public class Student {
-    private String Name;
-    private int Id;
-    
+public enum Shift {
+    MORNING,
+    AFTERNOON,
+    EVENING
 }

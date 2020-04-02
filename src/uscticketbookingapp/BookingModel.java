@@ -9,6 +9,12 @@ package uscticketbookingapp;
  *
  * @author niyi
  */
-public class Rating {
+public class BookingModel {
     
-}
+    static int satDayLog[][] = new int[3][4];
+    static int sunDayLog[][] = new int [3][4];
+    
+    
+      
+    }
+
