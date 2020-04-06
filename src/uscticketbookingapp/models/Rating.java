@@ -12,16 +12,16 @@ import java.util.Date;
  * @author niyi
  */
 public class Rating {
-    private StudentExerciseClassBooking studentExerciseClassBooking;
+    private StudentExerciseClass studentExerciseClass;
     private int rating;
-    private Date date;
+    private String date;
     private String review;
 
     
     
     
-    public Rating(StudentExerciseClassBooking studentExerciseClassBooking,int rating, Date date, String review ){
-        setStudentdExerciseClassBooking(studentExerciseClassBooking);
+    public Rating(StudentExerciseClass studentExerciseClassBooking,int rating, String date, String review ){
+        setStudentdExerciseClass(studentExerciseClassBooking);
         setRating(rating);
         setDate(date);
         setReview(review);
@@ -31,15 +31,15 @@ public class Rating {
     /**
      * @return the stdExClassBooking
      */
-    public StudentExerciseClassBooking getStudentdExerciseClassBooking() {
-        return studentExerciseClassBooking;
+    public StudentExerciseClass getStudentdExerciseClass() {
+        return studentExerciseClass;
     }
 
     /**
      * @param stdExClassBooking the stdExClassBooking to set
      */
-    public void setStudentdExerciseClassBooking(StudentExerciseClassBooking studentExerciseClassBooking) {
-        this.studentExerciseClassBooking = studentExerciseClassBooking;
+    public void setStudentdExerciseClass(StudentExerciseClass studentExerciseClassBooking) {
+        this.studentExerciseClass = studentExerciseClassBooking;
     }
 
     /**
@@ -59,14 +59,14 @@ public class Rating {
     /**
      * @return the date
      */
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
     /**
      * @param date the date to set
      */
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

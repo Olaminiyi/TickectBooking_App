@@ -19,6 +19,8 @@ public class UscTicketBookingApp {
     public static void main(String[] args) {
         // TODO code application logic here
         BookingController book = new BookingController();
+      GenerateReport rpt=new GenerateReport();
+              rpt.GenerateStudentsPerClassWithRating();
         Scanner scanner = new Scanner (System.in);
         System.out.println("Please enter your name");
         System.out.println("Please enter your name");

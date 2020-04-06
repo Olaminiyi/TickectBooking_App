@@ -17,14 +17,14 @@ import uscticketbookingapp.enums.ExerciseDay;
  */
 public class ExerciseClassesTimetable {
     private ExerciseClass exerciseClass;
-    private Date date;
+    private String date;
     private ExerciseDay exerciseDay;
     private int id;
     private boolean isSlotAvailable=true;
     
     private static List<ExerciseClassesTimetable> exerciseClasses=new ArrayList<ExerciseClassesTimetable>();
     
-    public ExerciseClassesTimetable(ExerciseClass exerciseClass,Date date,ExerciseDay exerciseDay, int id,boolean isSlotAvailable){
+    public ExerciseClassesTimetable(ExerciseClass exerciseClass,String date,ExerciseDay exerciseDay, int id,boolean isSlotAvailable){
         setExerciseClass(exerciseClass);
         setDate(date);
         setExerciseDay(exerciseDay);
@@ -66,14 +66,14 @@ public class ExerciseClassesTimetable {
     /**
      * @return the date
      */
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
     /**
      * @param date the date to set
      */
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

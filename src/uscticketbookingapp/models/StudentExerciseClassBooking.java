@@ -15,13 +15,11 @@ import java.util.List;
 public class StudentExerciseClassBooking {
     private Student student;
     private ExerciseClassesTimetable exclassTimetable;
-    private Date date;
+    private String date;
     private boolean isPaid;
     private boolean isActive;
     
-    
-    
-    public StudentExerciseClassBooking(Student student, ExerciseClassesTimetable exclassTimetable,Date date, boolean isPaid,boolean isActive){
+    public StudentExerciseClassBooking(Student student, ExerciseClassesTimetable exclassTimetable,String date, boolean isPaid,boolean isActive){
         setStudent(student); 
         setExclassTimetable(exclassTimetable);
         setDate(date);
@@ -74,14 +72,14 @@ public class StudentExerciseClassBooking {
     /**
      * @return the date
      */
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 //
     /**
      * @param date the date to set
      */
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
