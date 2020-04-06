@@ -12,7 +12,7 @@ import java.util.List;
 import uscticketbookingapp.enums.ExerciseDay;
 import uscticketbookingapp.models.ExerciseClass;
 import uscticketbookingapp.models.ExerciseClassesTimetable;
-
+//
 /**
  *
  * @author niyi
