@@ -32,7 +32,7 @@ public class GenerateReport {
             //get unique dates
             List<StudentExerciseClass> exerciseClasses = StudentExerciseClassData.getStudentExerciseClassData();
             HashMap<String, List<Student>> mapdateStudentExercise = new HashMap<String, List<Student>>();
-            List<String> dates = new ArrayList<String>();
+            final List<String> dates = new ArrayList<String>();
             for (int i = 0; i < exerciseClasses.size(); i++) {
                 String exerciseClassName = exerciseClasses.get(i).getExerciseClassTable().getExerciseClass().getClassName();
                 Date date = new SimpleDateFormat("yyyy-MM-dd").parse(exerciseClasses.get(i).getExerciseClassTable().getDate());
@@ -41,9 +41,23 @@ public class GenerateReport {
                     dates.add(dateonly);
                 }
             }
+            
+            
 
             for (int d = 0; d < dates.size(); d++) {
                 List<Student> studentsOnDate = new ArrayList<>();
+                exerciseClasses.forEach(item -> {
+                    try {
+                        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(item.getExerciseClassTable().getDate());
+                         String dateonly = new SimpleDateFormat("yyyy-MM-dd").format(date);
+                        if(!dateonly.equals(dates.get(d)))
+                        {
+                            
+                        } else {
+                        }   } catch (ParseException ex) {
+                        Logger.getLogger(GenerateReport.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                });
                 for (int i = 0; i < exerciseClasses.size(); i++) {
 
                     String exerciseClassName = exerciseClasses.get(i).getExerciseClassTable().getExerciseClass().getClassName();
