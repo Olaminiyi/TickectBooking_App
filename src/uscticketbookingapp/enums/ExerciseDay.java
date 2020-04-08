@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public enum ExerciseDay {
     SATURDAY,
     SUNDAY
+    //
 //    String dayType;
 //    ArrayList<ExerciseClass> exCourses;
 //    static final int MAX_COURSE_IN_A_DAY = 3;
