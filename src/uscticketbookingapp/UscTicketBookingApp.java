@@ -77,7 +77,7 @@ public class UscTicketBookingApp {
 //                    
 //                } else {
 //                     System.out.println("You class booking was not successful");
-//                }
+//    //            }
                
             }
               
@@ -118,7 +118,7 @@ public class UscTicketBookingApp {
             
         }
         
-        
+        //
        // Scanner scanner = new Scanner(System.in);
       //  System.out.println("Please enter your name");
       //  System.out.println("Please enter your name");
