@@ -45,7 +45,7 @@ public class GenerateReport {
         return t -> seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
     }
     
-
+//
  int ratingTotal=0;
                  int totalStudents=0;
     public List<ExerciseStudentCountRatingReport> GenerateStudentsPerClassWithRating() {
