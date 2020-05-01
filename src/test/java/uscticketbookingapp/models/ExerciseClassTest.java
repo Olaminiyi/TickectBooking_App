@@ -55,7 +55,7 @@ public class ExerciseClassTest {
       
     }
 
- //
+ 
 
     /**
      * Test of getId method, of class ExerciseClass.
