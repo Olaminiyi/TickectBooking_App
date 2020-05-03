@@ -53,15 +53,16 @@ public class StudentTest {
     /**
      * Test of setName method, of class Student.
 //     */
-//    @Test
-//    public void testSetName() {
-//        System.out.println("setName");
-//        String Name = "";
-//        Student instance = null;
-//        instance.setName(Name);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testSetName() {
+        System.out.println("setName");
+        String Name = "Nathan";
+        Student instance = new Student(1,"John");
+        instance.setName(Name);
+        String expResult = "Nathan";
+        String result = instance.getName();
+        assertEquals(expResult, result);
+    }
 //
 //    /**
 //     * Test of getId method, of class Student.
