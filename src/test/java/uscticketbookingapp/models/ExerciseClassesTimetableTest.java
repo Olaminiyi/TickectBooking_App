@@ -67,7 +67,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
       
     }
-//
+//summary
 //    /**
 //     * Test of setExerciseClassId method, of class ExerciseClassesTimetable.
 //     */
