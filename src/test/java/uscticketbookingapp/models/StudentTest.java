@@ -94,14 +94,14 @@ public class StudentTest {
 //    /**
 //     * Test of addStudent method, of class Student.
 //     */
-//    @Test
-//    public void testAddStudent() {
-//        System.out.println("addStudent");
-//        Student instance = null;
-//        instance.addStudent();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testAddStudent() {
+        System.out.println("addStudent");
+        Student instance = new Student(5,"Sade");
+        boolean result =   instance.addStudent(9,"Tarun");
+        boolean expResult = true;
+        assertEquals(expResult, result);
+    }
 //
 //    /**
 //     * Test of getStudent method, of class Student.
