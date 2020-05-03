@@ -177,7 +177,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-//
+// summmary of setExerciseDay
 //    /**
 //     * Test of setExerciseDay method, of class ExerciseClassesTimetable.
 //     */
