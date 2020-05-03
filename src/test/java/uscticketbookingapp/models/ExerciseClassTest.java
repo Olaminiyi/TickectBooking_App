@@ -87,33 +87,9 @@ public class ExerciseClassTest {
         int expResult = 2;
         assertEquals(expResult, result);
         
-        // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
+        
     }
-//
-    /**
-     * Test of getSize method, of class ExerciseClass.
-     */
-//    @Test
-//    public void testGetSize() {
-//        System.out.println("getSize");
-//       ArrayList <ExerciseClass> exerciseClass = new ArrayList<ExerciseClass>();
-//       ExerciseClass instance = new ExerciseClass(6,"WEIGHT_LIFTING","EVENING", 250);
-//       ExerciseClass instance1 = new ExerciseClass(3,"BOX-FIT","EVENING", 200);
-//       instance.addExerciseClass(7, "ZUMA", "AFTERNOON", 300);
-//       instance1.addExerciseClass(4, "JUDO", "MORNING", 300);
-//       exerciseClass.add(instance);
-//       exerciseClass.add(instance1);
-//       
-//        int expResult = 2;
-//        int result = instance.getSize(exerciseClass);
-//        assertEquals(expResult, result);
-//       
-//    }
-//
-//    /**
-//     * Test of getClassName method, of class ExerciseClass.
-//     */
+
     @Test
     public void testGetClassName() {
         System.out.println("getClassName");
