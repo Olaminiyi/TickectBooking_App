@@ -150,7 +150,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-//
+//summary of isSlotAvailable
 //    /**
 //     * Test of setIsSlotAvailable method, of class ExerciseClassesTimetable.
 //     */
