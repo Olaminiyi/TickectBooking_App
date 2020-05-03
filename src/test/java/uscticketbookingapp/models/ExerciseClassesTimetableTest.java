@@ -192,19 +192,21 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-//
-//    /**
-//     * Test of getExerciseClasses method, of class ExerciseClassesTimetable.
-//     */
-//    @Test
-//    public void testGetExerciseClasses() {
-//        System.out.println("getExerciseClasses");
-//        List<ExerciseClassesTimetable> expResult = null;
-//        List<ExerciseClassesTimetable> result = ExerciseClassesTimetable.getExerciseClasses();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+
+    /**
+     * Test of getExerciseClasses method, of class ExerciseClassesTimetable.
+     */
+    @Test
+    public void testGetExerciseClasses() {
+        System.out.println("getExerciseClasses");
+        List<ExerciseClassesTimetable> instance = new ArrayList<ExerciseClassesTimetable>();
+        List<ExerciseClassesTimetable> expResult = ExerciseClassesTimetable.getExerciseClasses();
+        instance.add(new ExerciseClassesTimetable(10, 7,"2020-09-01","SUNDAY",true));
+        
+        assertNotNull(expResult);
+       
+        
+    }
 //
 //    /**
 //     * Test of setExerciseClasses method, of class ExerciseClassesTimetable.
