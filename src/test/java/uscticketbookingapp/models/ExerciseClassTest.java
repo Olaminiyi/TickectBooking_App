@@ -129,7 +129,7 @@ public class ExerciseClassTest {
         assertEquals(expResult, result, 0.0);
         
     }
-//
+
 //    /**
 //     * Test of setPrice method, of class ExerciseClass.
 //     */
@@ -143,7 +143,7 @@ public class ExerciseClassTest {
         float expResult = 200;
         assertEquals(expResult, result, 0.0);
     }
-//
+
 //    /**
 //     * Test of getShift method, of class ExerciseClass.
 //     */
