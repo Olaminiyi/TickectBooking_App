@@ -55,7 +55,7 @@ public class ExerciseClassTest {
       
     }
 
- 
+ //
 
     /**
      * Test of getId method, of class ExerciseClass.
@@ -94,22 +94,22 @@ public class ExerciseClassTest {
     /**
      * Test of getSize method, of class ExerciseClass.
      */
-    @Test
-    public void testGetSize() {
-        System.out.println("getSize");
-       ArrayList <ExerciseClass> exerciseClass = new ArrayList<ExerciseClass>();
-       ExerciseClass instance = new ExerciseClass(6,"WEIGHT_LIFTING","EVENING", 250);
-       ExerciseClass instance1 = new ExerciseClass(3,"BOX-FIT","EVENING", 200);
-       instance.addExerciseClass(7, "ZUMA", "AFTERNOON", 300);
-       instance1.addExerciseClass(4, "JUDO", "MORNING", 300);
-       exerciseClass.add(instance);
-       exerciseClass.add(instance1);
-       
-        int expResult = 2;
-        int result = instance.getSize(exerciseClass);
-        assertEquals(expResult, result);
-       
-    }
+//    @Test
+//    public void testGetSize() {
+//        System.out.println("getSize");
+//       ArrayList <ExerciseClass> exerciseClass = new ArrayList<ExerciseClass>();
+//       ExerciseClass instance = new ExerciseClass(6,"WEIGHT_LIFTING","EVENING", 250);
+//       ExerciseClass instance1 = new ExerciseClass(3,"BOX-FIT","EVENING", 200);
+//       instance.addExerciseClass(7, "ZUMA", "AFTERNOON", 300);
+//       instance1.addExerciseClass(4, "JUDO", "MORNING", 300);
+//       exerciseClass.add(instance);
+//       exerciseClass.add(instance1);
+//       
+//        int expResult = 2;
+//        int result = instance.getSize(exerciseClass);
+//        assertEquals(expResult, result);
+//       
+//    }
 //
 //    /**
 //     * Test of getClassName method, of class ExerciseClass.
