@@ -67,16 +67,15 @@ public class StudentTest {
 //    /**
 //     * Test of getId method, of class Student.
 //     */
-//    @Test
-//    public void testGetId() {
-//        System.out.println("getId");
-//        Student instance = null;
-//        int expResult = 0;
-//        int result = instance.getId();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testGetId() {
+        System.out.println("getId");
+        Student instance =  new Student(5,"Sade");
+        int expResult = 5;
+        int result = instance.getId();
+        assertEquals(expResult, result);
+        
+    }
 //
 //    /**
 //     * Test of setId method, of class Student.
