@@ -156,7 +156,7 @@ public class ExerciseClassTest {
         assertEquals(expResult, result);
        
     }
-
+//test
 //    /**
 //     * Test of setShift method, of class ExerciseClass.
 //     */
