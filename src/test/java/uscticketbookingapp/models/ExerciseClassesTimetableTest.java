@@ -122,7 +122,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
       
     }
-//
+
 //    /**
 //     * Test of setId method, of class ExerciseClassesTimetable.
 //     */
@@ -137,7 +137,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-//
+
 //    /**
 //     * Test of isIsSlotAvailable method, of class ExerciseClassesTimetable.
 //     */
