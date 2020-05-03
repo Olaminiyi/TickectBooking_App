@@ -109,7 +109,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result); assertEquals(expResult, result);
         
     }
-//
+
 //    /**
 //     * Test of getId method, of class ExerciseClassesTimetable.
 //     */
@@ -120,7 +120,7 @@ public class ExerciseClassesTimetableTest {
         int expResult = 7;
         int result = instance.getId();
         assertEquals(expResult, result);
-       
+  //     
     }
 //
 //    /**
