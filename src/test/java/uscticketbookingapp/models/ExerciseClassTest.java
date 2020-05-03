@@ -99,7 +99,7 @@ public class ExerciseClassTest {
         assertEquals(expResult, result);
         
     }
-//
+
 //    /**
 //     * Test of setClassName method, of class ExerciseClass.
 //     */
@@ -115,7 +115,7 @@ public class ExerciseClassTest {
         assertEquals(expResult, result);
        
     }
-//
+
 //    /**
 //     * Test of getPrice method, of class ExerciseClass.
 //     */
