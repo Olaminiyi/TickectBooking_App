@@ -56,7 +56,7 @@ public class ExerciseClassTest {
     }
 
  //
-// dd
+
     /**
      * Test of getId method, of class ExerciseClass.
      */
@@ -90,7 +90,7 @@ public class ExerciseClassTest {
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }
-
+//
     /**
      * Test of getSize method, of class ExerciseClass.
      */
