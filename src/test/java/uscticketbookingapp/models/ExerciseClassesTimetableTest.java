@@ -120,7 +120,7 @@ public class ExerciseClassesTimetableTest {
         int expResult = 7;
         int result = instance.getId();
         assertEquals(expResult, result);
-  //     
+      
     }
 //
 //    /**
@@ -137,7 +137,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-
+//
 //    /**
 //     * Test of isIsSlotAvailable method, of class ExerciseClassesTimetable.
 //     */
