@@ -36,7 +36,7 @@ public class StudentTest {
     @After
     public void tearDown() {
     }
-
+//
     /**
      * Test of getName method, of class Student.
      */
@@ -102,19 +102,6 @@ public class StudentTest {
         boolean expResult = true;
         assertEquals(expResult, result);
     }
-//
-//    /**
-//     * Test of getStudent method, of class Student.
-//     */
-//    @Test
-//    public void testGetStudent() {
-//        System.out.println("getStudent");
-//        Student instance = null;
-//        Student[] expResult = null;
-//        Student[] result = instance.getStudent();
-//        assertArrayEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+
     
 }

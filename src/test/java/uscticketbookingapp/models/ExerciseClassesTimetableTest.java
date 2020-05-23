@@ -67,7 +67,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
       
     }
-
+//
 //    /**
 //     * Test of setExerciseClassId method, of class ExerciseClassesTimetable.
 //     */
@@ -109,7 +109,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result); assertEquals(expResult, result);
         
     }
-
+//
 //    /**
 //     * Test of getId method, of class ExerciseClassesTimetable.
 //     */
@@ -120,9 +120,9 @@ public class ExerciseClassesTimetableTest {
         int expResult = 7;
         int result = instance.getId();
         assertEquals(expResult, result);
-      
+       
     }
-
+//
 //    /**
 //     * Test of setId method, of class ExerciseClassesTimetable.
 //     */
@@ -150,7 +150,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-
+//
 //    /**
 //     * Test of setIsSlotAvailable method, of class ExerciseClassesTimetable.
 //     */
@@ -177,7 +177,7 @@ public class ExerciseClassesTimetableTest {
         assertEquals(expResult, result);
         
     }
-// summmary of setExerciseDay
+//
 //    /**
 //     * Test of setExerciseDay method, of class ExerciseClassesTimetable.
 //     */
@@ -199,25 +199,14 @@ public class ExerciseClassesTimetableTest {
     @Test
     public void testGetExerciseClasses() {
         System.out.println("getExerciseClasses");
-        List<ExerciseClassesTimetable> instance = new ArrayList<ExerciseClassesTimetable>();
-        List<ExerciseClassesTimetable> expResult = ExerciseClassesTimetable.getExerciseClasses();
-        instance.add(new ExerciseClassesTimetable(10, 7,"2020-09-01","SUNDAY",true));
-        
+        List<ExerciseClassesTimetable> expResult = new ArrayList<ExerciseClassesTimetable>();
+        //List<ExerciseClassesTimetable> result = ExerciseClassesTimetable.getExerciseClasses();
+        expResult.add(new ExerciseClassesTimetable(10, 7,"2020-09-01","SUNDAY",true));
         assertNotNull(expResult);
-       
         
     }
-//
-//    /**
-//     * Test of setExerciseClasses method, of class ExerciseClassesTimetable.
-//     */
-//    @Test
-//    public void testSetExerciseClasses() {
-//        System.out.println("setExerciseClasses");
-//        List<ExerciseClassesTimetable> aExerciseClasses = null;
-//        ExerciseClassesTimetable.setExerciseClasses(aExerciseClasses);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+
+
     
 }
+

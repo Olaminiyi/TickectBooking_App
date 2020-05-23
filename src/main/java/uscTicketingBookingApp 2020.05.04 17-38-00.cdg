@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="uscTicketingBookingApp">
+  <ClassDiagramComponents>
+    <Class name="App" package="com.mycompany.app" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ExerciseClassData" package="uscticketbookingapp.data" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getExerciseClasses" returnType="List&lt;ExerciseClass&gt;" visibility="public" isStatic="true"/>
+        <Method name="getExerciseClass" returnType="ExerciseClass" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ExerciseClassesTimetableData" package="uscticketbookingapp.data" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getExerciseClassesTimeTable" returnType="List&lt;ExerciseClassesTimetable&gt;" visibility="public" isStatic="true"/>
+        <Method name="getExerciseClassTimeTable" returnType="ExerciseClassesTimetable" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentData" package="uscticketbookingapp.data" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="students" type="List&lt;Student&gt;" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getStudents" returnType="List&lt;Student&gt;" visibility="public" isStatic="true"/>
+        <Method name="getStudent" returnType="Student" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="addNewStudent" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentExerciseClassBookingData" package="uscticketbookingapp.data" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="gson" type="Gson" visibility="package" isStatic="true"/>
+        <Field name="studentExerciseBookinig" type="List&lt;StudentExerciseClassBooking&gt;" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getStudentExerciseClassBookings" returnType="List&lt;StudentExerciseClassBooking&gt;" visibility="public" isStatic="true"/>
+        <Method name="getStudentExerciseClassBooking" returnType="StudentExerciseClassBooking" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getStudentExerciseClassBookingByClass" returnType="List&lt;StudentExerciseClassBooking&gt;" visibility="public" isStatic="true">
+          <Argument type="int" name="classid"/>
+        </Method>
+        <Method name="bookExerciseClass" returnType="String" visibility="public" isStatic="true">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="studentId"/>
+          <Argument type="int" name="classid"/>
+          <Argument type="String" name="date"/>
+          <Argument type="boolean" name="paid"/>
+          <Argument type="boolean" name="active"/>
+        </Method>
+        <Method name="changeExerciseClass" returnType="int" visibility="public" isStatic="true">
+          <Argument type="int" name="bookingId"/>
+          <Argument type="int" name="newExerciseClassId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentExerciseClassData" package="uscticketbookingapp.data" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getStudentExerciseClassData" returnType="List&lt;StudentExerciseClass&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Enum name="ExerciseDay" package="uscticketbookingapp.enums" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Literals>
+        <Literal name="SATURDAY"/>
+        <Literal name="SUNDAY"/>
+      </Literals>
+    </Enum>
+    <Enum name="Shift" package="uscticketbookingapp.enums" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Literals>
+        <Literal name="MORNING"/>
+        <Literal name="AFTERNOON"/>
+        <Literal name="EVENING"/>
+      </Literals>
+    </Enum>
+    <Class name="ExerciseClass" package="uscticketbookingapp.models" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="Id" type="int" visibility="private"/>
+        <Field name="className" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="shift" type="String" visibility="private"/>
+        <Field name="MAX_CLASS_SIZE" type="int" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="className"/>
+          <Argument type="String" name="shift"/>
+          <Argument type="float" name="price"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addExerciseClass" returnType="boolean" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="className"/>
+          <Argument type="String" name="shift"/>
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="Id"/>
+        </Method>
+        <Method name="Size" returnType="int" visibility="public">
+          <Argument type="ArrayList&lt;ExerciseClass&gt;" name="exerciseClass"/>
+        </Method>
+        <Method name="getClassName" returnType="String" visibility="public"/>
+        <Method name="setClassName" returnType="void" visibility="public">
+          <Argument type="String" name="className"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="getShift" returnType="String" visibility="public"/>
+        <Method name="setShift" returnType="void" visibility="public">
+          <Argument type="String" name="shift"/>
+        </Method>
+        <Method name="getMAX_CLASS_SIZE" returnType="int" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ExerciseClassesTimetable" package="uscticketbookingapp.models" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="exerciseClassId" type="int" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="exerciseDay" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="isSlotAvailable" type="boolean" visibility="private"/>
+        <Field name="exerciseClasses" type="List&lt;ExerciseClassesTimetable&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="exerciseClassId"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="exerciseDay"/>
+          <Argument type="boolean" name="isSlotAvailable"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Size" returnType="int" visibility="public">
+          <Argument type="ArrayList&lt;ExerciseClassesTimetable&gt;" name="exerciseClassesTimetable"/>
+        </Method>
+        <Method name="addExerciseClass" returnType="boolean" visibility="public"/>
+        <Method name="getAvailableExerciseClasses" returnType="List&lt;ExerciseClassesTimetable&gt;" visibility="public"/>
+        <Method name="getExerciseClassId" returnType="int" visibility="public"/>
+        <Method name="setExerciseClassId" returnType="int" visibility="public">
+          <Argument type="int" name="exerciseClassId"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="isIsSlotAvailable" returnType="boolean" visibility="public"/>
+        <Method name="setIsSlotAvailable" returnType="void" visibility="public">
+          <Argument type="boolean" name="isSlotAvailable"/>
+        </Method>
+        <Method name="getExerciseDay" returnType="String" visibility="public"/>
+        <Method name="setExerciseDay" returnType="void" visibility="public">
+          <Argument type="String" name="exerciseDay"/>
+        </Method>
+        <Method name="getExerciseClasses" returnType="List&lt;ExerciseClassesTimetable&gt;" visibility="public" isStatic="true"/>
+        <Method name="setExerciseClasses" returnType="void" visibility="public" isStatic="true">
+          <Argument type="List&lt;ExerciseClassesTimetable&gt;" name="aExerciseClasses"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ExerciseStudentCountRatingReport" package="uscticketbookingapp.models" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="exerciseClass" type="String" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="totalStudents" type="int" visibility="private"/>
+        <Field name="averageRating" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="judo"/>
+          <Argument type="String" name="string"/>
+          <Argument type="int" name="i"/>
+          <Argument type="int" name="i0"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="exerciseClass"/>
+          <Argument type="String" name="date"/>
+          <Argument type="int" name="totalStudents"/>
+          <Argument type="float" name="averageRating"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getExerciseClass" returnType="String" visibility="public"/>
+        <Method name="setExerciseClass" returnType="void" visibility="public">
+          <Argument type="String" name="exerciseClass"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getTotalStudents" returnType="int" visibility="public"/>
+        <Method name="setTotalStudents" returnType="void" visibility="public">
+          <Argument type="int" name="totalStudents"/>
+        </Method>
+        <Method name="getAverageRating" returnType="float" visibility="public"/>
+        <Method name="setAverageRating" returnType="void" visibility="public">
+          <Argument type="float" name="averageRating"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Student" package="uscticketbookingapp.models" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="private"/>
+        <Field name="Id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="Id"/>
+        </Method>
+        <Method name="addStudent" returnType="boolean" visibility="public">
+          <Argument type="int" name="Id"/>
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="getStudent" returnType="Student[]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="StudentExerciseClass" package="uscticketbookingapp.models" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="Id" type="int" visibility="private"/>
+        <Field name="exerciseId" type="int" visibility="private"/>
+        <Field name="timeTableId" type="int" visibility="private"/>
+        <Field name="studentId" type="int" visibility="private"/>
+        <Field name="rating" type="int" visibility="private"/>
+        <Field name="ratingReview" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="Id"/>
+          <Argument type="int" name="exerciseId"/>
+          <Argument type="int" name="timeTableId"/>
+          <Argument type="int" name="studentId"/>
+          <Argument type="int" name="rating"/>
+          <Argument type="String" name="ratingReview"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTimeTableId" returnType="int" visibility="public"/>
+        <Method name="setTimeTableId" returnType="void" visibility="public">
+          <Argument type="int" name="timeTableId"/>
+        </Method>
+        <Method name="getRating" returnType="int" visibility="public"/>
+        <Method name="setRating" returnType="void" visibility="public">
+          <Argument type="int" name="rating"/>
+        </Method>
+        <Method name="getRatingReview" returnType="String" visibility="public"/>
+        <Method name="setRatingReview" returnType="void" visibility="public">
+          <Argument type="String" name="ratingReview"/>
+        </Method>
+        <Method name="getExerciseClassId" returnType="int" visibility="public"/>
+        <Method name="setExerciseClassId" returnType="void" visibility="public">
+          <Argument type="int" name="exerciseClassId"/>
+        </Method>
+        <Method name="getStudents" returnType="int" visibility="public"/>
+        <Method name="setStudents" returnType="void" visibility="public">
+          <Argument type="int" name="studentId"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="Id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StudentExerciseClassBooking" package="uscticketbookingapp.models" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="studentId" type="int" visibility="private"/>
+        <Field name="exclassId" type="int" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="isPaid" type="boolean" visibility="private"/>
+        <Field name="isActive" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="Id"/>
+          <Argument type="int" name="studentId"/>
+          <Argument type="int" name="exclassId"/>
+          <Argument type="String" name="date"/>
+          <Argument type="boolean" name="isPaid"/>
+          <Argument type="boolean" name="isActive"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getStudentId" returnType="int" visibility="public"/>
+        <Method name="setStudentId" returnType="void" visibility="public">
+          <Argument type="int" name="studentId"/>
+        </Method>
+        <Method name="getExclassId" returnType="int" visibility="public"/>
+        <Method name="setExclassId" returnType="void" visibility="public">
+          <Argument type="int" name="exclassTimetableId"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="isIsPaid" returnType="boolean" visibility="public"/>
+        <Method name="setIsPaid" returnType="void" visibility="public">
+          <Argument type="boolean" name="isPaid"/>
+        </Method>
+        <Method name="isIsActive" returnType="boolean" visibility="public"/>
+        <Method name="setIsActive" returnType="void" visibility="public">
+          <Argument type="boolean" name="isActive"/>
+        </Method>
+        <Method name="addStudentExerciseClassBooking" returnType="void" visibility="public"/>
+        <Method name="getStudentExerciseClassBooking" returnType="List&lt;StudentExerciseClassBooking[]&gt;" visibility="public"/>
+        <Method name="updateStudentExerciseClassBooking" returnType="StudentExerciseClassBooking" visibility="public">
+          <Argument type="StudentExerciseClassBooking" name="stdExbooking"/>
+        </Method>
+        <Method name="deleteStudentExerciseClassBooking" returnType="void" visibility="public">
+          <Argument type="StudentExerciseClassBooking" name="stdExbooking"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TotalIncomePerExerciseReport" package="uscticketbookingapp.models" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="exerciseClass" type="String" visibility="private"/>
+        <Field name="totalIncome" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="exerciseClass"/>
+          <Argument type="float" name="totalIncome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getExerciseClass" returnType="String" visibility="public"/>
+        <Method name="setExerciseClass" returnType="void" visibility="public">
+          <Argument type="String" name="exerciseClass"/>
+        </Method>
+        <Method name="getTotalIncome" returnType="float" visibility="public"/>
+        <Method name="setTotalIncome" returnType="void" visibility="public">
+          <Argument type="float" name="totalIncome"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FIleHelper" package="uscticketbookingapps" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="readFile" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="filePath"/>
+        </Method>
+        <Method name="writeToFile" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="filePath"/>
+          <Argument type="String" name="content"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GenerateReport" package="uscticketbookingapps" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="totalRating" type="float" visibility="package"/>
+        <Field name="ratingTotal" type="int" visibility="package"/>
+        <Field name="totalStudents" type="int" visibility="package"/>
+        <Field name="exerciseCount" type="int" visibility="package"/>
+        <Field name="totalIncomePerExercise" type="float" visibility="package"/>
+        <Field name="reportTotals" type="List&lt;TotalIncomePerExerciseReport&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="distinctByKey" returnType="Predicate&lt;T&gt;" visibility="private" isStatic="true">
+          <Argument type="Function&lt;? super T, ?&gt;" name="keyExtractor"/>
+        </Method>
+        <Method name="GenerateStudentsPerClassWithRating" returnType="List&lt;ExerciseStudentCountRatingReport&gt;" visibility="public"/>
+        <Method name="GeneratGroupExercisesWithHighestIncome" returnType="List&lt;TotalIncomePerExerciseReport&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UscTicketBookingApp" package="uscticketbookingapps" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="uscticketbookingapp.data.StudentData" target="uscticketbookingapp.models.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="uscticketbookingapp.models.StudentExerciseClassBooking" target="uscticketbookingapp.models.StudentExerciseClassBooking" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="reportTotals" source="uscticketbookingapps.GenerateReport" target="uscticketbookingapp.models.TotalIncomePerExerciseReport" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;TotalIncomePerExerciseReport&gt;"/>
+    <UseRelation source="uscticketbookingapps.GenerateReport" target="uscticketbookingapp.models.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="uscticketbookingapp.models.Student" target="uscticketbookingapp.models.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="uscticketbookingapp.models.ExerciseClass" target="uscticketbookingapp.models.ExerciseClass" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="students" source="uscticketbookingapp.data.StudentData" target="uscticketbookingapp.models.Student" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Student&gt;"/>
+    <UseRelation source="uscticketbookingapp.data.ExerciseClassData" target="uscticketbookingapp.models.ExerciseClass" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="uscticketbookingapp.data.StudentExerciseClassData" target="uscticketbookingapp.models.StudentExerciseClass" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="uscticketbookingapps.GenerateReport" target="uscticketbookingapp.models.TotalIncomePerExerciseReport" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="exerciseClasses" source="uscticketbookingapp.models.ExerciseClassesTimetable" target="uscticketbookingapp.models.ExerciseClassesTimetable" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ExerciseClassesTimetable&gt;"/>
+    <UseRelation source="uscticketbookingapp.data.ExerciseClassesTimetableData" target="uscticketbookingapp.models.ExerciseClassesTimetable" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="studentExerciseBookinig" source="uscticketbookingapp.data.StudentExerciseClassBookingData" target="uscticketbookingapp.models.StudentExerciseClassBooking" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;StudentExerciseClassBooking&gt;"/>
+    <UseRelation source="uscticketbookingapp.models.ExerciseClassesTimetable" target="uscticketbookingapp.models.ExerciseClassesTimetable" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="uscticketbookingapp.data.StudentExerciseClassBookingData" target="uscticketbookingapp.models.StudentExerciseClassBooking" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
